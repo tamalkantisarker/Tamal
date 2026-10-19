@@ -20,7 +20,7 @@
 - 🛠️ Deep hands-on experience in **Python, Java, C++, and Go**, focusing on concurrent systems, network protocols, and robust backend engineering.
 - 🔬 Undergraduate Researcher exploring **Vehicular Edge Computing (VEC), Multi-Agent Reinforcement Learning (MARL), and LLM In-Context Learning**.
 - 💡 Solved **500+ algorithmic challenges** spanning Graph Theory, Dynamic Programming, and Number Theory.
-- 🌍 Available for **Remote Software Engineering, Backend, and AI Data/Evaluation** opportunities.
+- 🤝 Experienced in both **independent from-scratch system building** and **multi-developer agile collaboration**.
 
 ---
 
@@ -84,31 +84,64 @@
 
 ---
 
-### 📌 Featured Projects
+## 🛠️ Solo Engineering Projects (Built by My Own Hand)
 
 <table>
   <tr>
-    <td width="50%">
+    <td width="50%" valign="top">
       <h3>🔒 <a href="https://github.com/tamalkantisarker/Networking">Networking – Encrypted Protocol Suite</a></h3>
-      <p>Application-layer encrypted chat and resumable file transfer protocol in Java. Built with custom packet framing, hybrid <strong>RSA session key exchange + AES-GCM encryption</strong>, and non-blocking prioritized queues to eliminate chat latency during multi-MB file transfers.</p>
-      <p><em>Java • Sockets • Multi-threading • Cryptography • Maven</em></p>
+      <img src="https://img.shields.io/badge/Type-Solo_Project-7057ff?style=flat-square" />
+      <p>An application-layer encrypted client-server protocol built from scratch in Java. Features hybrid <strong>RSA session key exchange + AES-GCM payload encryption</strong>, prioritized packet queues to eliminate chat latency during multi-MB file transfers, and chunked resumable file transfers across network dropouts.</p>
+      <p><strong>Stack:</strong> <code>Java</code>, <code>Socket Programming</code>, <code>Multi-threading</code>, <code>RSA / AES-GCM</code>, <code>Maven</code></p>
     </td>
-    <td width="50%">
-      <h3>📱 <a href="https://github.com/tamalkantisarker/HoneyTALK">HoneyTalk – Live Social & Audio Room App</a></h3>
-      <p>Full-featured mobile application supporting live multi-seat audio rooms, real-time messaging, and in-app store transactions. Engineered with an automated <strong>multi-tier fallback cache</strong> (local disk fallback if AWS S3 timeouts occur) and 4 vector animation engines.</p>
-      <p><em>Flutter • Dart • AWS S3 • VPS • Rive • Lottie</em></p>
+    <td width="50%" valign="top">
+      <h3>🧠 <a href="https://github.com/tamalkantisarker/DSA">DSA & Graph Theory Engine</a></h3>
+      <img src="https://img.shields.io/badge/Type-Solo_Project-7057ff?style=flat-square" />
+      <p>From-scratch implementations of fundamental and advanced graph algorithms: <strong>Tarjan’s Strongly Connected Components (SCC), Articulation Points & Bridges, Dijkstra, Bellman-Ford, Floyd-Warshall, and Kruskal/Prim MST</strong> with union-find disjoint sets.</p>
+      <p><strong>Stack:</strong> <code>Java</code>, <code>C++</code>, <code>Graph Theory</code>, <code>Data Structures</code></p>
     </td>
   </tr>
   <tr>
-    <td width="50%">
-      <h3>☕ <a href="https://github.com/tamalkantisarker/Java_project">Cafeteria Enterprise Management, DU</a></h3>
-      <p>Enterprise desktop management application for the Science Complex Cafeteria, University of Dhaka. Implements strict <strong>Role-Based Access Control (RBAC)</strong> across 4 user tiers, automated billing, and transactional integrity with MySQL.</p>
-      <p><em>Java • JavaFX • MySQL • IntelliJ IDEA • Maven</em></p>
+    <td width="50%" valign="top">
+      <h3>🔢 <a href="https://github.com/tamalkantisarker/Number-Theory-part-1">Number Theory & Crypto Primitives</a></h3>
+      <img src="https://img.shields.io/badge/Type-Solo_Project-7057ff?style=flat-square" />
+      <p>Computational number theory suite implementing Modular Exponentiation, Extended Euclidean Algorithm, Fermat’s Primality Test, Sieve of Eratosthenes, and Diophantine equation solvers in modern C++.</p>
+      <p><strong>Stack:</strong> <code>C++</code>, <code>Modern STL</code>, <code>Computational Math</code></p>
     </td>
-    <td width="50%">
-      <h3>🧠 <a href="https://github.com/tamalkantisarker/DSA">DSA & Graph Theory Engine</a></h3>
-      <p>Core and advanced graph algorithms and data structures implemented from scratch: <strong>Tarjan’s Strongly Connected Components (SCC), Articulation Points & Bridges, Dijkstra, Bellman-Ford, Floyd-Warshall, and Kruskal/Prim MST</strong>.</p>
-      <p><em>Java • C++ • Graph Theory • Algorithms</em></p>
+    <td width="50%" valign="top">
+      <h3>⚡ Python Production Automation & ETL Pipelines</h3>
+      <img src="https://img.shields.io/badge/Type-Solo_Freelance-7057ff?style=flat-square" />
+      <p>High-throughput automated web scraping engines, data transformation pipelines, and lightweight RESTful microservices with automated retries, strict type hinting, and unit test suites (<code>pytest</code>).</p>
+      <p><strong>Stack:</strong> <code>Python 3</code>, <code>FastAPI</code>, <code>PostgreSQL</code>, <code>PyTest</code>, <code>Docker</code></p>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 👥 Team & Collaborative Projects (Built by Many Hands)
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📱 <a href="https://github.com/tamalkantisarker/HoneyTALK">HoneyTalk – Live Social & Audio Room App</a></h3>
+      <img src="https://img.shields.io/badge/Type-Team_Project-00b4d8?style=flat-square" />
+      <p>Full-stack mobile application supporting multi-seat live audio rooms, interactive real-time messaging, and in-app gifting. <strong>My Role:</strong> Integrated 4 dynamic vector animation formats (Rive, Lottie, SVGA, DotLottie) and engineered an automated multi-tier storage fallback cache (local disk fallback if AWS S3 encounters timeouts).</p>
+      <p><strong>Stack:</strong> <code>Flutter</code>, <code>Dart</code>, <code>AWS S3</code>, <code>Linux VPS</code>, <code>Rive</code>, <code>Lottie</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎓 UniExpert – Campus Knowledge & Mentorship Platform</h3>
+      <img src="https://img.shields.io/badge/Type-Team_Project_(CSE4113)-00b4d8?style=flat-square" />
+      <p>A university-exclusive web ecosystem connecting DU students with verified alumni experts. <strong>My Role:</strong> Co-architected the searchable technical knowledge repository, role-based access control (RBAC), and interactive mentorship scheduling modules.</p>
+      <p><strong>Stack:</strong> <code>Python</code>, <code>Web Frameworks</code>, <code>PostgreSQL</code>, <code>JavaScript</code>, <code>HTML5/CSS3</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <h3>☕ <a href="https://github.com/tamalkantisarker/Java_project">Cafeteria Enterprise Management System, DU</a></h3>
+      <img src="https://img.shields.io/badge/Type-Academic_Team_Project-00b4d8?style=flat-square" />
+      <p>Desktop enterprise management application for the Science Complex Cafeteria, University of Dhaka. Implements MVC design architecture, independent RBAC dashboards across 4 user tiers, automated order billing, and transactional integrity with MySQL.</p>
+      <p><strong>Stack:</strong> <code>Java</code>, <code>JavaFX</code>, <code>MySQL</code>, <code>IntelliJ IDEA</code>, <code>Maven</code>, <code>MVC Pattern</code></p>
     </td>
   </tr>
 </table>
