@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamal Kanti Sarker · 3D Systems & Engineering Portfolio</title>
+  <meta name="description" content="CS student at University of Dhaka, systems, cryptography, and mobile engineer. An interactive 3D engineering portfolio." />
+  <meta name="theme-color" content="#050608" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tamal Kanti Sarker · 3D Portfolio" />
+  <meta property="og:description" content="CS Student @ University of Dhaka. Systems, Cryptography, and Mobile Engineering Portfolio with interactive 3D WebGL." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Lucide) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- WebGL 3D Canvas Background -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Ambient Overlays -->
+  <div class="ambient-overlay"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <div class="site-content">
+    
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">TKS</span>
+          <span>TAMAL KANTI SARKER</span>
+        </a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link">Rules</a></li>
+            <li><a href="#projects" class="nav-link">Artifacts</a></li>
+            <li><a href="#skills" class="nav-link">Matrix</a></li>
+            <li><a href="#terminal" class="nav-link">Console</a></li>
+            <li><a href="#contact" class="nav-link">Transmission</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button id="mobile-menu-btn" class="btn-icon mobile-only" aria-label="Toggle Menu" title="Menu">
+            <i data-lucide="menu" id="menu-icon"></i>
+          </button>
+          <button id="audio-toggle" class="btn-icon" aria-label="Toggle Sound Effects" title="Sound FX">
+            <i id="audio-icon" data-lucide="volume-2"></i>
+          </button>
+          <a href="https://github.com/tamalkantisarker" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub Profile" title="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-meta">
+            <div class="status-pill">
+              <span class="status-pulse"></span>
+              <span>AVAILABLE FOR ROLES & RESEARCH</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Architecting <br />
+            <span class="gradient-text">Resilient Systems</span> & Cryptographic Protocols.
+          </h1>
+
+          <p class="hero-subtitle">
+            CS Student @ University of Dhaka · Systems & Mobile Architect
+          </p>
+
+          <p class="hero-description">
+            I engineer software at the intersection of mathematical rigor and distributed reliability: hybrid RSA/AES-GCM socket protocols, real-time audio rooms with vector dynamics, and competitive graph engines.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>EXPLORE ARTIFACTS</span>
+              <i data-lucide="arrow-down-right" style="width:16px;height:16px;"></i>
+            </a>
+            <a href="#terminal" class="btn btn-terminal">
+              <i data-lucide="terminal" style="width:16px;height:16px;"></i>
+              <span>LAUNCH CONSOLE</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>TRANSMISSION</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <div class="stat-number">9<span>+</span></div>
+              <div class="stat-label">Verified Repositories</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100<span>%</span></div>
+              <div class="stat-label">Compile & Test Pass</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">RSA<span>+</span>AES</div>
+              <div class="stat-label">Hybrid Crypto Suite</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">DU<span>.CSE</span></div>
+              <div class="stat-label">Academic Pedigree</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-3d-visual">
+          <div class="hero-card-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT / RULE OF CODE ==================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ENGINEERING PHILOSOPHY</span>
+          <h2 class="section-title">The Three Core Principles</h2>
+          <p class="section-desc">
+            Like rules etched into the bedrock of computing, every system I design is guided by three non-negotiable principles.
+          </p>
+        </div>
+
+        <div class="rules-grid">
+          <div class="rule-card">
+            <span class="rule-number">RULE · 01</span>
+            <h3 class="rule-heading">Asymptotic & Real-World Resilience</h3>
+            <p class="rule-body">
+              An algorithm with theoretical $O(V \log V)$ performance is useless if cache locality and packet jitter crumble under load. I benchmark memory layouts, thread synchronization, and chunked streams for unyielding uptime.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <span class="rule-number">RULE · 02</span>
+            <h3 class="rule-heading">Mathematical Cryptographic Proof</h3>
+            <p class="rule-body">
+              Security is never an afterthought. Hybrid protocols must guarantee confidentiality and tamper resistance: 2048-bit RSA asymmetric handshake coupled with 256-bit AES-GCM authenticated payload encryption.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <span class="rule-number">RULE · 03</span>
+            <h3 class="rule-heading">Clean Modular Abstraction</h3>
+            <p class="rule-body">
+              From enterprise JavaFX architectures to cross-platform Flutter state management, decoupled architectures conquer real-world entropy, enabling independent testing, zero-downtime updates, and effortless team scaling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS MATRIX ==================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PORTFOLIO REPOSITORIES</span>
+          <h2 class="section-title">Featured Systems & Artifacts</h2>
+          <p class="section-desc">
+            End-to-end engineered software audited, compiled, and verified for production integrity.
+          </p>
+        </div>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">ALL ARTIFACTS</button>
+          <button class="filter-btn" data-filter="solo">SOLO SYSTEMS</button>
+          <button class="filter-btn" data-filter="team">TEAM COLLABORATIONS</button>
+          <button class="filter-btn" data-filter="academic">ACADEMIC & ENTERPRISE</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Networking -->
+          <div class="project-card" data-category="solo">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-solo">SOLO PROJECT</span>
+                <div class="project-links">
+                  <a href="https://github.com/tamalkantisarker/Networking" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source">
+                    <i data-lucide="github" style="width:16px;height:16px;"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Encrypted Networking Protocol Engine</h3>
+              <p class="project-desc">
+                From-scratch Java application-layer client-server protocol. Implements hybrid RSA session key exchange + AES-GCM payload encryption, QoS priority packet queues eliminating chat lag during multi-MB file transfers, and chunked resumable file transfers across network dropouts.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Socket Programming</span>
+              <span class="tech-tag">RSA / AES-GCM</span>
+              <span class="tech-tag">Multi-threading</span>
+              <span class="tech-tag">Maven</span>
+            </div>
+          </div>
+
+          <!-- Project 2: HoneyTALK -->
+          <div class="project-card" data-category="team">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-team">TEAM PROJECT</span>
+                <div class="project-links">
+                  <a href="https://github.com/tamalkantisarker/HoneyTALK" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source">
+                    <i data-lucide="github" style="width:16px;height:16px;"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">HoneyTalk – Live Social & Audio Room App</h3>
+              <p class="project-desc">
+                Full-stack mobile app featuring multi-seat live audio rooms, interactive gifting, and real-time messaging. Personally integrated 4 dynamic vector animation formats (Rive, Lottie, SVGA, DotLottie) and engineered an automated multi-tier storage fallback cache on AWS S3 timeouts.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">AWS S3</span>
+              <span class="tech-tag">Rive / Lottie</span>
+              <span class="tech-tag">WebRTC</span>
+            </div>
+          </div>
+
+          <!-- Project 3: DSA Engine -->
+          <div class="project-card" data-category="solo">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-solo">SOLO PROJECT</span>
+                <div class="project-links">
+                  <a href="https://github.com/tamalkantisarker/DSA" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source">
+                    <i data-lucide="github" style="width:16px;height:16px;"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">DSA & Graph Theory Master Suite</h3>
+              <p class="project-desc">
+                Clean, competitive implementations of advanced graph algorithms: Tarjan's Strongly Connected Components (SCC), Articulation Points & Bridges, Dijkstra with PriorityQueue, Bellman-Ford negative cycle checks, and Kruskal/Prim MST with Disjoint Set Union (DSU).
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Graph Theory</span>
+              <span class="tech-tag">DSU</span>
+              <span class="tech-tag">Tarjan / Kosaraju</span>
+            </div>
+          </div>
+
+          <!-- Project 4: Cafeteria Enterprise -->
+          <div class="project-card" data-category="academic">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-academic">ACADEMIC ENTERPRISE</span>
+                <div class="project-links">
+                  <a href="https://github.com/tamalkantisarker/Java_project" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source">
+                    <i data-lucide="github" style="width:16px;height:16px;"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Cafeteria Enterprise Management System</h3>
+              <p class="project-desc">
+                Desktop enterprise management system for the Science Complex Cafeteria, University of Dhaka. Implements MVC design architecture, independent RBAC dashboards across 4 user tiers, automated transactional billing, and relational integrity with MySQL.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">JavaFX</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">MVC Architecture</span>
+              <span class="tech-tag">RBAC</span>
+              <span class="tech-tag">Maven</span>
+            </div>
+          </div>
+
+          <!-- Project 5: Number Theory -->
+          <div class="project-card" data-category="solo">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-solo">SOLO PROJECT</span>
+                <div class="project-links">
+                  <a href="https://github.com/tamalkantisarker/Number-Theory-part-1" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source">
+                    <i data-lucide="github" style="width:16px;height:16px;"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Number Theory & Crypto Primitives</h3>
+              <p class="project-desc">
+                Computational mathematics suite in modern C++20: Binary Modular Exponentiation ($O(\log b)$), Extended Euclidean Algorithm, Fermat's Modular Inverse ($nCr \pmod p$), Linear Sieve of Eratosthenes, and Prime Factorization engines with unit test assertions.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">C++20</span>
+              <span class="tech-tag">Modular Arithmetic</span>
+              <span class="tech-tag">Prime Sieve</span>
+              <span class="tech-tag">Cryptography</span>
+            </div>
+          </div>
+
+          <!-- Project 6: Dynamic Programming Suite -->
+          <div class="project-card" data-category="solo">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-solo">SOLO PROJECT</span>
+                <div class="project-links">
+                  <a href="https://github.com/tamalkantisarker/Important-coding" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source">
+                    <i data-lucide="github" style="width:16px;height:16px;"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Dynamic Programming Master Suite</h3>
+              <p class="project-desc">
+                High-performance C++ algorithmic solutions covering classic and complex DP archetypes: Value-Indexed Knapsack 2 ($W \le 10^9$), Longest Increasing Subsequence, Rod Cutting, Frog Jump, Subset Sum, and Coin Change variants.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Dynamic Programming</span>
+              <span class="tech-tag">AtCoder / CSES</span>
+              <span class="tech-tag">Algorithmics</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS MATRIX ==================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">TECHNICAL COMPETENCIES</span>
+          <h2 class="section-title">The Engineering Stack</h2>
+          <p class="section-desc">
+            A comprehensive breakdown of languages, systems frameworks, and development environments.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Cat 1 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <i data-lucide="code" class="skill-cat-icon"></i>
+              <h3 class="skill-cat-title">Core Languages</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">C / C++20</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Java (SE / Enterprise)</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Dart / Flutter</span>
+                  <span class="skill-level">Proficient</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Python 3</span>
+                  <span class="skill-level">Proficient</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">SQL (Postgres, MySQL)</span>
+                  <span class="skill-level">Proficient</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 86%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cat 2 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <i data-lucide="network" class="skill-cat-icon"></i>
+              <h3 class="skill-cat-title">Systems & Protocols</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Socket & TCP/IP I/O</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Hybrid Crypto (RSA + AES)</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">QoS Priority Queues</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Multi-threading & Locks</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 89%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Resumable Chunk Transfers</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cat 3 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <i data-lucide="cpu" class="skill-cat-icon"></i>
+              <h3 class="skill-cat-title">Mobile, Cloud & DevOps</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Flutter / Rive / Lottie</span>
+                  <span class="skill-level">Proficient</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Docker & Containerization</span>
+                  <span class="skill-level">Proficient</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 82%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Linux / WSL Systems</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Git & GitFlow</span>
+                  <span class="skill-level">Expert</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 96%;"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info">
+                  <span class="skill-name">Apache Maven</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE TERMINAL ==================== -->
+    <section id="terminal" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">HOLOGRAPHIC SHELL</span>
+          <h2 class="section-title">Interactive Terminal Console</h2>
+          <p class="section-desc">
+            Direct interface to the portfolio kernel. Type commands to query identity, repositories, or read rules.
+          </p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">tks-session://dhaka-cluster/bash (v2.4)</div>
+            <div style="font-size:0.75rem;color:var(--accent-cyan);">ACTIVE</div>
+          </div>
+
+          <div id="terminal-body" class="terminal-body">
+            <div id="terminal-history" class="terminal-history">
+              <div class="terminal-line" style="color:var(--text-subtle);">
+                Type <span style="color:var(--accent-cyan);font-weight:bold;">'help'</span> to inspect available commands, or <span style="color:var(--accent-cyan);font-weight:bold;">'whoami'</span> to verify operator identity.
+              </div>
+            </div>
+
+            <div class="terminal-input-row">
+              <span class="terminal-prompt-label">visitor@tks-kernel:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT / TRANSMISSION ==================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">SECURE TRANSMISSION</span>
+          <h2 class="section-title">Initiate Contact</h2>
+          <p class="section-desc">
+            Have a project, research inquiry, or engineering challenge? Transmit a dispatch.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <a href="mailto:tamalkanti223@gmail.com" class="contact-channel-item">
+              <div class="contact-channel-icon"><i data-lucide="mail"></i></div>
+              <div class="channel-detail">
+                <h4>Direct Email</h4>
+                <p>tamalkanti223@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/tamalkantisarker" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+              <div class="contact-channel-icon"><i data-lucide="github"></i></div>
+              <div class="channel-detail">
+                <h4>GitHub Organization</h4>
+                <p>github.com/tamalkantisarker</p>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/tamalkantisarker" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+              <div class="contact-channel-icon"><i data-lucide="linkedin"></i></div>
+              <div class="channel-detail">
+                <h4>LinkedIn Network</h4>
+                <p>linkedin.com/in/tamalkantisarker</p>
+              </div>
+            </a>
+
+            <div class="contact-channel-item" style="cursor:default;">
+              <div class="contact-channel-icon"><i data-lucide="map-pin"></i></div>
+              <div class="channel-detail">
+                <h4>Deployment Station</h4>
+                <p>Dhaka, Bangladesh · 23.7275° N, 90.4043° E</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <form id="transmission-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Operator / Name</label>
+                <input type="text" id="form-name" class="form-control" placeholder="E.g. Dr. Alex Vance" required />
+              </div>
+              <div class="form-group">
+                <label for="form-email" class="form-label">Transmission Frequency / Email</label>
+                <input type="email" id="form-email" class="form-control" placeholder="alex@research.org" required />
+              </div>
+              <div class="form-group">
+                <label for="form-msg" class="form-label">Encrypted Payload / Message</label>
+                <textarea id="form-msg" class="form-control" rows="4" placeholder="Brief outline of challenge, timeframe, or collaboration proposal..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                <span>DISPATCH TRANSMISSION</span>
+                <i data-lucide="send" style="width:16px;height:16px;"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-copy">
+          © 2026 Tamal Kanti Sarker · All rights reserved.
+        </div>
+        <div class="footer-coords">
+          23.7275° N, 90.4043° E · DU CAMPUS, DHAKA
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="js/sound.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
